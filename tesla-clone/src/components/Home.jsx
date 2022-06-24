@@ -14,6 +14,9 @@ const Speedometer = styled(MdSpeed)`
   vertical-align: middle;
   padding-bottom: 0.2rem;
   margin-right: 0.2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export default function Home() {

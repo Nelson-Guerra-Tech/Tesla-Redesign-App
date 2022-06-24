@@ -67,6 +67,9 @@ const Info = styled.div`
   align-items: center;
   gap: 1rem;
   padding-top: 0.5rem;
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -74,6 +77,15 @@ const InfoContainer = styled.div`
   flex-direction: column;
   p {
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 0.8rem;
+    }
+    p {
+      font-size: 0.5rem;
+    }
   }
 `;
 
