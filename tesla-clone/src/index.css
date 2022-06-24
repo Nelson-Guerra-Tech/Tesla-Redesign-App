@@ -8,11 +8,13 @@
   /* color: #393c41; */
   /* will include padding within a div */
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
   overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 a {
@@ -21,21 +23,26 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   padding: 0 10px;
-  font-weight: bold;
+  font-weight: 400;
   flex-wrap: nowrap;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
 }
 
-.right-menu {
-  /* font-weight: 400; */
+a:hover {
+  background-color: white;
+  border-radius: 20px;
 }
 
 h1 {
   font-weight: bold;
   color: #393c41;
+  user-select: none;
 }
 p {
   color: #393c41;
   letter-spacing: 1px;
+  user-select: none;
 }
 
 .btn {
@@ -90,6 +97,12 @@ p {
 .tesla-logo {
   font-size: 3rem;
   color: #111;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tesla-logo:hover {
+  color: whitesmoke;
 }
 
 .burger-menu {

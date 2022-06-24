@@ -13,30 +13,50 @@ export default function Home() {
       <Section
         title='Model S'
         description='Order Online for Touchless Delivery'
-        backgroundImg='model-s.jpg'
+        backgroundImg='tesla-model-s.jpeg'
         leftBtnText='Custom Order'
         rightBtnText='Existing Inventory'
+        id='modelS'
       />
       <Section
         title='Model 3'
         description='Order Online for Touchless Delivery'
-        backgroundImg='model-3.jpg'
+        backgroundImg='tesla-model-3.jpeg'
         leftBtnText='Custom Order'
         rightBtnText='Existing Inventory'
+        id='model3'
       />
       <Section
         title='Model X'
         description='Order Online for Touchless Delivery'
-        backgroundImg='model-x.jpg'
+        backgroundImg='tesla-model-x.jpeg'
         leftBtnText='Custom Order'
         rightBtnText='Existing Inventory'
+        id='modelX'
       />
       <Section
         title='Model Y'
         description='Order Online for Touchless Delivery'
-        backgroundImg='model-y.jpg'
+        backgroundImg='tesla-model-y.jpeg'
         leftBtnText='Custom Order'
         rightBtnText='Existing Inventory'
+        id='modelY'
+      />
+      <Section
+        title='Roadster'
+        description='Order Online for Touchless Delivery'
+        backgroundImg='tesla-roadster.jpeg'
+        leftBtnText='Custom Order'
+        rightBtnText='Existing Inventory'
+        id='roadster'
+      />
+      <Section
+        title='Cybertruck'
+        description='Order Online for Touchless Delivery'
+        backgroundImg='tesla-cybertruck.jpeg'
+        leftBtnText='Custom Order'
+        rightBtnText='Existing Inventory'
+        id='cybertruck'
       />
       <Section
         title='Lowest Cost Solar Panels in America'

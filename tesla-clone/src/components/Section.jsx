@@ -67,11 +67,12 @@ export default function Section({
   backgroundImg,
   leftBtnText,
   rightBtnText,
+  id,
 }) {
   const arrow = <FiChevronDown className='down-arrow' />;
 
   return (
-    <Wrap bgImage={backgroundImg}>
+    <Wrap bgImage={backgroundImg} id={id}>
       <Fade bottom>
         <ItemText>
           <h1>{title}</h1>

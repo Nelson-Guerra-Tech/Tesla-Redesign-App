@@ -12,7 +12,7 @@ const Container = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px 20px;
   // expand header to full width
   top: 0;
@@ -52,6 +52,7 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px 0 0 20px;
 
   // useState to show burger menu
   transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
@@ -59,6 +60,11 @@ const BurgerNav = styled.div`
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  a:hover {
+    background-color: #393c41;
+    color: whitesmoke;
   }
 `;
 
@@ -68,8 +74,9 @@ const CloseWrapper = styled.div`
 `;
 
 const CloseBtn = styled(IoMdClose)`
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  }
 `;
 
 export default function Header() {
@@ -78,16 +85,15 @@ export default function Header() {
 
   return (
     <Container>
-      <a>
-        <SiTesla className='tesla-logo' />
-      </a>
+      <SiTesla className='tesla-logo' />
+
       <Menu>
-        {cars &&
-          cars.map((car, index) => (
-            <a href='#' key={index}>
-              {car}
-            </a>
-          ))}
+        <a href='#modelS'>Model S</a>
+        <a href='#model3'>Model 3</a>
+        <a href='#modelX'>Model X</a>
+        <a href='#modelY'>Model Y</a>
+        <a href='#roadster'>Roadster</a>
+        <a href='#cybertruck'>Cybertruck</a>
       </Menu>
 
       <RightMenu>
@@ -128,14 +134,6 @@ export default function Header() {
 
         <li>
           <a href='#'>Trade-in Inventory</a>
-        </li>
-
-        <li>
-          <a href='#'>Cybertruck</a>
-        </li>
-
-        <li>
-          <a href='#'>Roadster</a>
         </li>
       </BurgerNav>
     </Container>
