@@ -39,6 +39,13 @@ h1 {
   color: #393c41;
   user-select: none;
 }
+
+h2 {
+  font-weight: bold;
+  color: #393c41;
+  vertical-align: middle;
+}
+
 p {
   color: #393c41;
   letter-spacing: 1px;

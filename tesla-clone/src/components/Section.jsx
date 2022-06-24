@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FiChevronDown } from 'react-icons/fi';
-import { Fade } from 'react-reveal';
+import { MdSpeed } from 'react-icons/md';
 
 // styled components
 const Wrap = styled.div`
@@ -61,6 +61,22 @@ const Button = styled.div`
   align-items: center;
 `;
 
+const Info = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+`;
+
+const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 0.8rem;
+  }
+`;
+
 export default function Section({
   title,
   description,
@@ -68,27 +84,64 @@ export default function Section({
   leftBtnText,
   rightBtnText,
   id,
+  speed,
+  range,
+  driveTrain,
+  topSpeed,
+  horsePower,
+  mph,
+  epa,
+  motor,
+  top,
+  power,
+  icon,
 }) {
   const arrow = <FiChevronDown className='down-arrow' />;
 
   return (
     <Wrap bgImage={backgroundImg} id={id}>
-      <Fade bottom>
-        <ItemText>
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </ItemText>
-      </Fade>
+      <ItemText data-aos='fade-up'>
+        <h1>{title}</h1>
+        <p>{description}</p>
+
+        <Info>
+          <InfoContainer>
+            <h2>
+              {icon}
+              {speed}
+            </h2>
+            <p>{mph}</p>
+          </InfoContainer>
+
+          <InfoContainer>
+            <h2>{range}</h2>
+            <p>{epa}</p>
+          </InfoContainer>
+
+          <InfoContainer>
+            <h2>{driveTrain}</h2>
+            <p>{motor}</p>
+          </InfoContainer>
+
+          <InfoContainer>
+            <h2>{topSpeed}</h2>
+            <p>{top}</p>
+          </InfoContainer>
+
+          <InfoContainer>
+            <h2>{horsePower}</h2>
+            <p>{power}</p>
+          </InfoContainer>
+        </Info>
+      </ItemText>
 
       <Button>
-        <Fade bottom>
-          <ButtonGroup>
-            <LeftButton className='btn'>{leftBtnText}</LeftButton>
-            {rightBtnText && (
-              <RightButton className='btn'>{rightBtnText}</RightButton>
-            )}
-          </ButtonGroup>
-        </Fade>
+        <ButtonGroup data-aos='fade-up' data-aos-delay='100'>
+          <LeftButton className='btn'>{leftBtnText}</LeftButton>
+          {rightBtnText && (
+            <RightButton className='btn'>{rightBtnText}</RightButton>
+          )}
+        </ButtonGroup>
 
         {arrow}
       </Button>
