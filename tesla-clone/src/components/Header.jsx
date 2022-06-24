@@ -60,6 +60,7 @@ const BurgerNav = styled.div`
   li {
     padding: 15px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
   }
 
   a:hover {
@@ -101,12 +102,11 @@ export default function Header() {
           Shop
         </a>
         <a className='right-menu' href='#'>
-          Tesla Account
+          Account
         </a>
-        <GiHamburgerMenu
-          className='burger-menu'
-          onClick={() => setBurgerStatus(true)}
-        />
+        <a className='right-menu' onClick={() => setBurgerStatus(true)}>
+          Menu{' '}
+        </a>
       </RightMenu>
 
       {/* side menu for burger */}
