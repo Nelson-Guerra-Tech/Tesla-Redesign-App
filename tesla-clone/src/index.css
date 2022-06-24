@@ -22,7 +22,7 @@ a {
   color: #393c41;
   cursor: pointer;
   text-transform: uppercase;
-  padding: 0 10px;
+  padding: 5px 10px;
   font-weight: 400;
   flex-wrap: nowrap;
   transition: all 0.3s ease-in-out;
@@ -49,6 +49,9 @@ p {
   transition: all 0.2s ease-in-out;
   user-select: none;
   letter-spacing: 1px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .btn:active {
@@ -102,7 +105,7 @@ p {
 }
 
 .tesla-logo:hover {
-  color: whitesmoke;
+  color: #fe0000;
 }
 
 .burger-menu {

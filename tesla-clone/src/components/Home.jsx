@@ -11,20 +11,20 @@ export default function Home() {
   return (
     <Container>
       <Section
-        title='Model S'
-        description='Order Online for Touchless Delivery'
-        backgroundImg='tesla-model-s.jpeg'
-        leftBtnText='Custom Order'
-        rightBtnText='Existing Inventory'
-        id='modelS'
-      />
-      <Section
         title='Model 3'
         description='Order Online for Touchless Delivery'
         backgroundImg='tesla-model-3.jpeg'
         leftBtnText='Custom Order'
         rightBtnText='Existing Inventory'
         id='model3'
+      />
+      <Section
+        title='Model S'
+        description='Order Online for Touchless Delivery'
+        backgroundImg='tesla-model-s.jpeg'
+        leftBtnText='Custom Order'
+        rightBtnText='Existing Inventory'
+        id='modelS'
       />
       <Section
         title='Model X'
