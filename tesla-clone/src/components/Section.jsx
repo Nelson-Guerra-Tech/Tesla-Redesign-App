@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FiChevronDown } from 'react-icons/fi';
+import { Fade } from 'react-reveal';
 
 // styled components
 const Wrap = styled.div`
@@ -71,18 +72,23 @@ export default function Section({
 
   return (
     <Wrap bgImage={backgroundImg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
 
       <Button>
-        <ButtonGroup>
-          <LeftButton className='btn'>{leftBtnText}</LeftButton>
-          {rightBtnText && (
-            <RightButton className='btn'>{rightBtnText}</RightButton>
-          )}
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton className='btn'>{leftBtnText}</LeftButton>
+            {rightBtnText && (
+              <RightButton className='btn'>{rightBtnText}</RightButton>
+            )}
+          </ButtonGroup>
+        </Fade>
+
         {arrow}
       </Button>
     </Wrap>
