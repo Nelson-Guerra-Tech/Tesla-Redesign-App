@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FiChevronDown } from 'react-icons/fi';
 
 // styled components
 const Wrap = styled.div`
@@ -8,7 +9,12 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('/images/model-3.jpg');
+  background-image: url('/images/model-s.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: ${(props) => `url('/images/${props.bgImage}')`};
 `;
 
 const ItemText = styled.div`
@@ -16,7 +22,16 @@ const ItemText = styled.div`
   text-align: center;
 `;
 
-const ButtonGroup = styled.div``;
+const ButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
 
 // buttons
 const LeftButton = styled.div`
@@ -29,21 +44,47 @@ const LeftButton = styled.div`
   justify-content: center;
   align-items: center;
   opacity: 0.85;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
 `;
-const RightButton = styled(LeftButton)``;
+const RightButton = styled(LeftButton)`
+  background-color: white;
+  color: #393c41;
+  opacity: 0.7;
+`;
 
-export default function Section() {
+const Button = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export default function Section({
+  title,
+  description,
+  backgroundImg,
+  leftBtnText,
+  rightBtnText,
+}) {
+  const arrow = <FiChevronDown className='down-arrow' />;
+
   return (
-    <Wrap>
+    <Wrap bgImage={backgroundImg}>
       <ItemText>
-        <h1>Model 3</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </ItemText>
 
-      <ButtonGroup>
-        <LeftButton>Custom Order</LeftButton>
-        <RightButton>Existing Inventory</RightButton>
-      </ButtonGroup>
+      <Button>
+        <ButtonGroup>
+          <LeftButton className='btn'>{leftBtnText}</LeftButton>
+          {rightBtnText && (
+            <RightButton className='btn'>{rightBtnText}</RightButton>
+          )}
+        </ButtonGroup>
+        {arrow}
+      </Button>
     </Wrap>
   );
 }
